@@ -27,6 +27,7 @@ export default function UnityPlayer() {
         <canvas
             id='unity-canvas'
             ref={canvasRef}
+            className=''
             style={{ width: '100%', height: '100%' }}>
         </canvas>
     );
