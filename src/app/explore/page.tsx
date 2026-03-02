@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import UnityPlayer from "@/components/event/UnityPlayer";
 import AgendaWidget from "@/components/widgets/AgendaWidget";
