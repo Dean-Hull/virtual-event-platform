@@ -1,15 +1,15 @@
 import Image from "next/image";
-import { Innovator } from "@/types/innovators";
+import { Speaker } from "@/types/innovators";
 import { Badge } from "../ui/badge";
 
-export function InnovatorCard({ innovator }: { innovator: Innovator }) {
+export function SpeakerCard({ speaker }: { speaker: Speaker }) {
     return (
         <div className="relative flex flex-col rounded-md overflow-hidden bg-white">
             <div className="relative w-full overflow-hidden bg-blue-50 h-96">
-                {innovator.thumbnail && (
+                {speaker.thumbnail && (
                     <Image
-                        src={innovator.thumbnail}
-                        alt={`${innovator.name}'s profile picture`}
+                        src={speaker.thumbnail}
+                        alt={`${speaker.name}'s profile picture`}
                         fill
                         className="object-cover object-top"
                     />
@@ -18,18 +18,18 @@ export function InnovatorCard({ innovator }: { innovator: Innovator }) {
 
             <div className="flex flex-col px-5 pt-4 pb-5 gap-1">
                 <span className="font-bold text-black leading-snug">
-                    {innovator.name}
+                    {speaker.name}
                 </span>
                 <span className="text-gray-500">
-                    {innovator.contactDetails.title}
+                    {speaker.contactDetails.title}
                 </span>
                 <p className="text-gray-700 mt-1 leading-relaxed">
-                    {innovator.headline}
+                    {speaker.headline}
                 </p>
 
-                {innovator.tags.length > 0 && (
+                {speaker.tags.length > 0 && (
                     <div className="flex flex-wrap gap-1.5 mt-2">
-                        {innovator.tags.map((tag) => (
+                        {speaker.tags.map((tag) => (
                             <Badge
                                 key={tag}
                                 variant="outline"

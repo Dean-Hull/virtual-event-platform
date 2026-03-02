@@ -1,6 +1,6 @@
 import { StaticImageData } from "next/image";
 
-export interface Innovator {
+export interface Speaker {
     id: number;
     name: string;
     thumbnail: StaticImageData | null;
@@ -10,16 +10,16 @@ export interface Innovator {
     problem: string;
     solution: string;
     ask: string;
-    contactDetails: InnovatorContactDetails;
+    contactDetails: SpeakerContactDetails;
 }
 
-interface InnovatorContactDetails {
+interface SpeakerContactDetails {
     name: string;
     title: string;
     email: string;
 }
 
-export enum InnovatorTag {
+export enum SpeakerTag {
     AI = "AI",
     HEALTHCARE = "Healthcare",
     SAAS = "SaaS",

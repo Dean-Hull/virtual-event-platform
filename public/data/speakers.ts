@@ -8,15 +8,15 @@ import JuricaKoletic from "@/images/headshots/jurica-koletic-7YVZYZeITc8-unsplas
 import CarlosSilva from "@/images/headshots/linkedin-sales-solutions-pAtA8xe_iVM-unsplash.jpg";
 import MichaelDam from "@/images/headshots/michael-dam-mEZ3PoFGs_k-unsplash.jpg";
 import RyanHoffman from "@/images/headshots/ryan-hoffman-Ft4p5E9HjTQ-unsplash.jpg";
-import { InnovatorTag } from "@/types/innovators";
+import { SpeakerTag } from "@/types/innovators";
 
-export const innovatorsData = {
-    innovators: [
+export const speakersData = {
+    speakers: [
         {
             id: 1,
             name: "Sarah Chen",
             thumbnail: AlexStarnes,
-            tags: [InnovatorTag.AI, InnovatorTag.HEALTHCARE, InnovatorTag.SAAS],
+            tags: [SpeakerTag.AI, SpeakerTag.HEALTHCARE, SpeakerTag.SAAS],
             headline: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
             keyStat: "Lorem ipsum dolor sit amet.",
             problem: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -32,7 +32,7 @@ export const innovatorsData = {
             id: 2,
             name: "Marcus Johnson",
             thumbnail: ChristinaWocient,
-            tags: [InnovatorTag.IOT, InnovatorTag.SUSTAINABILITY, InnovatorTag.SMART_CITIES],
+            tags: [SpeakerTag.IOT, SpeakerTag.SUSTAINABILITY, SpeakerTag.SMART_CITIES],
             headline: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
             keyStat: "Lorem ipsum dolor sit amet.",
             problem: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -48,7 +48,7 @@ export const innovatorsData = {
             id: 3,
             name: "Elena Rodriguez",
             thumbnail: ClayElliot,
-            tags: [InnovatorTag.FINTECH, InnovatorTag.BLOCKCHAIN, InnovatorTag.PAYMENTS],
+            tags: [SpeakerTag.FINTECH, SpeakerTag.BLOCKCHAIN, SpeakerTag.PAYMENTS],
             headline: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
             keyStat: "Lorem ipsum dolor sit amet.",
             problem: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -64,7 +64,7 @@ export const innovatorsData = {
             id: 4,
             name: "David Kim",
             thumbnail: DannyPostma,
-            tags: [InnovatorTag.EDTECH, InnovatorTag.AI],
+            tags: [SpeakerTag.EDTECH, SpeakerTag.AI],
             headline: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
             keyStat: "Lorem ipsum dolor sit amet.",
             problem: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -80,7 +80,7 @@ export const innovatorsData = {
             id: 5,
             name: "Priya Patel",
             thumbnail: DarshanPatel,
-            tags: [InnovatorTag.AGRI_TECH, InnovatorTag.CLIMATE, InnovatorTag.SUSTAINABILITY],
+            tags: [SpeakerTag.AGRI_TECH, SpeakerTag.CLIMATE, SpeakerTag.SUSTAINABILITY],
             headline: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
             keyStat: "Lorem ipsum dolor sit amet.",
             problem: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -96,7 +96,7 @@ export const innovatorsData = {
             id: 6,
             name: "James Thompson",
             thumbnail: GregEdwards,
-            tags: [InnovatorTag.CYBERSECURITY, InnovatorTag.ENTERPRISE, InnovatorTag.AI],
+            tags: [SpeakerTag.CYBERSECURITY, SpeakerTag.ENTERPRISE, SpeakerTag.AI],
             headline: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
             keyStat: "Lorem ipsum dolor sit amet.",
             problem: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -112,7 +112,7 @@ export const innovatorsData = {
             id: 7,
             name: "Amelia Zhang",
             thumbnail: JuricaKoletic,
-            tags: [InnovatorTag.BIO_TECH, InnovatorTag.HEALTHCARE],
+            tags: [SpeakerTag.BIO_TECH, SpeakerTag.HEALTHCARE],
             headline: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
             keyStat: "Lorem ipsum dolor sit amet.",
             problem: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -128,7 +128,7 @@ export const innovatorsData = {
             id: 8,
             name: "Carlos Silva",
             thumbnail: CarlosSilva,
-            tags: [InnovatorTag.ROBOTICS, InnovatorTag.MANUFACTURING, InnovatorTag.AUTOMATION],
+            tags: [SpeakerTag.ROBOTICS, SpeakerTag.MANUFACTURING, SpeakerTag.AUTOMATION],
             headline: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
             keyStat: "Lorem ipsum dolor sit amet.",
             problem: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -144,7 +144,7 @@ export const innovatorsData = {
             id: 9,
             name: "Nina Zhao",
             thumbnail: MichaelDam,
-            tags: [InnovatorTag.MENTAL_HEALTH, InnovatorTag.AI, InnovatorTag.WELLNESS],
+            tags: [SpeakerTag.MENTAL_HEALTH, SpeakerTag.AI, SpeakerTag.WELLNESS],
             headline: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
             keyStat: "Lorem ipsum dolor sit amet.",
             problem: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -160,7 +160,7 @@ export const innovatorsData = {
             id: 10,
             name: "Robert Olsen",
             thumbnail: RyanHoffman,
-            tags: [InnovatorTag.CLIMATE_TECH, InnovatorTag.SUSTAINABILITY],
+            tags: [SpeakerTag.CLIMATE_TECH, SpeakerTag.SUSTAINABILITY],
             headline: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
             keyStat: "Lorem ipsum dolor sit amet.",
             problem: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -175,4 +175,4 @@ export const innovatorsData = {
     ],
 }
 
-export default innovatorsData;
+export default speakersData;
