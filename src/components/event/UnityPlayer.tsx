@@ -8,6 +8,7 @@ declare global {
     interface Window {
         unityInstance: any;
         createUnityInstance: any;
+        onUnityObjectSelected: ((id: string) => void) | null;
     }
 }
 
@@ -24,6 +25,7 @@ export default function UnityPlayer() {
 
         const script = document.createElement('script');
         script.src = `${BLOB_URL}/Builds.loader.js`;
+        
         script.onload = () => {
             if (!canvasRef.current) return;
 
@@ -32,13 +34,15 @@ export default function UnityPlayer() {
                 frameworkUrl: `${BLOB_URL}/Builds.framework.js`,
                 codeUrl: `${BLOB_URL}/Builds.wasm`,
             }).then((unityInstance: any) => {
+                window.unityInstance = unityInstance;
                 console.log('Unity instance created:', unityInstance);
             });
         };
         document.body.appendChild(script);
+
         return () => { 
             document.body.removeChild(script);
-            window.unityInstance = null;
+            window.unityInstance = undefined;
         };
     }, []);
 
