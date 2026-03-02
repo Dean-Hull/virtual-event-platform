@@ -1,7 +1,5 @@
+import UnityPlayer from "@/components/event/UnityPlayer";
+
 export default function Explore() {
-    return (
-        <div>
-            Explore Page
-        </div>
-    );
+    return <UnityPlayer />;
 }
