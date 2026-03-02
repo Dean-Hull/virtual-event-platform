@@ -22,10 +22,18 @@ export default function RootLayout({ children,
     <html lang="en">
       <body className={`${inter.variable} antialiased`}>
         <Header />
-          <div className="w-full flex flex-col items-center justify-center md:p-6 space-y-8">
-            {children}
-          </div>
+        <div className="w-full flex flex-col items-center justify-center space-y-8">
+          {children}
+        </div>
       </body>
+
+      <footer className="border-t border-slate-300 mt-auto py-8">
+        <div className="max-w-7xl mx-auto px-6">
+          <p className="text-xs text-black uppercase tracking-widest text-center">
+            © 2026 LeadXP · All Rights Reserved
+          </p>
+        </div>
+      </footer>
     </html>
   );
 }
