@@ -20,6 +20,7 @@ interface SpeakerContactDetails {
 }
 
 export enum SpeakerTag {
+    ALL = "All",
     AI = "AI",
     HEALTHCARE = "Healthcare",
     SAAS = "SaaS",

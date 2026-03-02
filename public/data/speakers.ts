@@ -8,7 +8,7 @@ import JuricaKoletic from "@/images/headshots/jurica-koletic-7YVZYZeITc8-unsplas
 import CarlosSilva from "@/images/headshots/linkedin-sales-solutions-pAtA8xe_iVM-unsplash.jpg";
 import MichaelDam from "@/images/headshots/michael-dam-mEZ3PoFGs_k-unsplash.jpg";
 import RyanHoffman from "@/images/headshots/ryan-hoffman-Ft4p5E9HjTQ-unsplash.jpg";
-import { SpeakerTag } from "@/types/innovators";
+import { SpeakerTag } from "@/types/speakers";
 
 export const speakersData = {
     speakers: [

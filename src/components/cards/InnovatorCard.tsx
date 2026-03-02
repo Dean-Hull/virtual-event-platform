@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Speaker } from "@/types/innovators";
+import { Speaker } from "@/types/speakers";
 import { Badge } from "../ui/badge";
 
 export function SpeakerCard({ speaker }: { speaker: Speaker }) {
