@@ -29,7 +29,17 @@ export default function Explore() {
                     <AgendaWidget
                         interactive
                         selectedSpeakerId={selectedSpeaker?.id ?? null}
-                        onSpeakerClick={setSelectedSpeaker}
+                        onSpeakerClick={(speaker) => {
+                            setSelectedSpeaker(speaker);
+
+                            if (window.unityInstance) {
+                                window.unityInstance.SendMessage(
+                                    "SelectionManager",
+                                    "SelectObject",
+                                    speaker.id.toString()
+                                );
+                            }
+                        }}
                     />
                     <UnityPlayer />
                 </div>
