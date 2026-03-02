@@ -18,3 +18,27 @@ interface InnovatorContactDetails {
     title: string;
     email: string;
 }
+
+export enum InnovatorTag {
+    AI = "AI",
+    HEALTHCARE = "Healthcare",
+    SAAS = "SaaS",
+    IOT = "IoT",
+    SUSTAINABILITY = "Sustainability",
+    SMART_CITIES = "Smart Cities",
+    FINTECH = "FinTech",
+    BLOCKCHAIN = "Blockchain",
+    PAYMENTS = "Payments",
+    EDTECH = "EdTech",
+    AGRI_TECH = "AgriTech",
+    CLIMATE = "Climate",
+    CYBERSECURITY = "Cybersecurity",
+    ENTERPRISE = "Enterprise",
+    BIO_TECH = "BioTech",
+    ROBOTICS = "Robotics",
+    MANUFACTURING = "Manufacturing",
+    AUTOMATION = "Automation",
+    MENTAL_HEALTH = "Mental Health",
+    WELLNESS = "Wellness",
+    CLIMATE_TECH = "Climate Tech",
+}
