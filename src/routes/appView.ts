@@ -1,6 +1,6 @@
 export enum AppView {
     HOME = 'home',
     EXPLORE = 'explore',
-    INNOVATORS = 'innovators',
+    SPEAKERS = 'speakers',
     KEYNOTE = 'keynote',
 }
