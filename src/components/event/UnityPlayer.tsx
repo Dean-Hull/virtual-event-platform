@@ -2,25 +2,44 @@
 
 import React, { useEffect } from 'react';
 
-const BLOB_BASE = process.env.NEXT_PUBLIC_BLOB_URL;
+const BLOB_URL = process.env.NEXT_PUBLIC_BLOB_URL;
+
+declare global {
+    interface Window {
+        unityInstance: any;
+        createUnityInstance: any;
+    }
+}
 
 export default function UnityPlayer() {
     const canvasRef = React.useRef<HTMLCanvasElement>(null);
 
     useEffect(() => {
+        if (!BLOB_URL) {
+            console.error('Blob URL not defined. Please set the environment variable.')
+            return;
+        }
+
+        if (window.createUnityInstance) return;
+
         const script = document.createElement('script');
-        script.src = `${BLOB_BASE}/Builds.loader.js`;
+        script.src = `${BLOB_URL}/Builds.loader.js`;
         script.onload = () => {
-            (window as any).createUnityInstance(document.getElementById('unity-canvas'), {
-                dataUrl: `${BLOB_BASE}/Builds.data`,
-                frameworkUrl: `${BLOB_BASE}/Builds.framework.js`,
-                codeUrl: `${BLOB_BASE}/Builds.wasm`,
+            if (!canvasRef.current) return;
+
+            (window as any).createUnityInstance(canvasRef.current, {
+                dataUrl: `${BLOB_URL}/Builds.data`,
+                frameworkUrl: `${BLOB_URL}/Builds.framework.js`,
+                codeUrl: `${BLOB_URL}/Builds.wasm`,
             }).then((unityInstance: any) => {
                 console.log('Unity instance created:', unityInstance);
             });
         };
         document.body.appendChild(script);
-        return () => { document.body.removeChild(script); };
+        return () => { 
+            document.body.removeChild(script);
+            window.unityInstance = null;
+        };
     }, []);
 
     return (
