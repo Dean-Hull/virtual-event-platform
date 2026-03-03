@@ -34,7 +34,7 @@ export default function AgendaItem({ speaker, onClick, selected = false }: Agend
             </div>
 
             <div className="flex flex-col min-w-0 flex-1">
-                <span className="text-sm font-medium text-slate-900 truncate">
+                <span className="text-sm font-medium text-black truncate">
                     {speaker.contactDetails.name}
                 </span>
                 <span className="text-xs text-slate-400">

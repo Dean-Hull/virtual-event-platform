@@ -53,7 +53,7 @@ export function UnitySpeakerCard({ speaker }: UnitySpeakerCardProps) {
                     {speaker.tags.map((tag) => (
                         <span
                             key={tag}
-                            className="text-xs font-semibold tracking-wider uppercase text-slate-900 border border-slate-500 px-2 py-0.5 rounded-sm"
+                            className="text-xs font-semibold tracking-wider uppercase text-black border border-slate-500 px-2 py-0.5 rounded-sm"
                         >
                             {tag}
                         </span>
