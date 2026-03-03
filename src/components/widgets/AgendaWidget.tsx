@@ -10,7 +10,7 @@ interface AgendaWidgetProps {
 
 export default function AgendaWidget({ interactive = true, selectedSpeakerId, onSpeakerClick }: AgendaWidgetProps) {
     return (
-        <div className="w-full h-auto bg-white m-2 overflow-y-auto border border-slate-200 rounded-sm divide-y divide-slate-100">
+        <div className="w-full h-auto bg-white overflow-y-auto border border-slate-200 rounded-sm divide-y divide-slate-100">
             {speakersData.speakers.map((speaker: Speaker) => (
                 <AgendaItem 
                 key={speaker.id} 
