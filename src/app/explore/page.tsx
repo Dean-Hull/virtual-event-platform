@@ -5,6 +5,7 @@ import UnityPlayer from "@/components/event/UnityPlayer";
 import AgendaWidget from "@/components/widgets/AgendaWidget";
 import { Speaker } from "@/types/speakers";
 import { speakersData } from "../../../public/data/speakers";
+import { UnitySpeakerCard } from "@/components/cards/UnitySpeakerCard";
 
 export default function Explore() {
     const [selectedSpeaker, setSelectedSpeaker] = React.useState<Speaker | null>(null);
@@ -41,7 +42,10 @@ export default function Explore() {
                             }
                         }}
                     />
-                    <UnityPlayer />
+                    <div className="relative w-full aspect-video">
+                        <UnityPlayer />
+                        <UnitySpeakerCard speaker={selectedSpeaker} />
+                    </div>
                 </div>
             </div>
         </main>
