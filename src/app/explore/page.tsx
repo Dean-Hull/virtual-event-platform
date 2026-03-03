@@ -36,7 +36,7 @@ export default function Explore() {
                             if (window.unityInstance) {
                                 window.unityInstance.SendMessage(
                                     "SelectionManager",
-                                    "SelectObject",
+                                    "Select",
                                     speaker.id.toString()
                                 );
                             }
