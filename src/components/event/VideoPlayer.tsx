@@ -29,7 +29,7 @@ export default function VideoPlayer({ videoId }: VideoPlayerProps) {
                 variant={'outline'}
                 size={'icon'}
                 onClick={() => setIsMuted(!isMuted)}
-                className='absolute bottom-4 left-4'>
+                className='absolute bottom-4 left-4 text-blue-500 hover:text-slate-700 transition-colors p-1.5'>
                 {isMuted ? <IoMdMicOff size={24} /> : <IoMdMic size={24} />}
             </Button>
             <Button
@@ -37,7 +37,7 @@ export default function VideoPlayer({ videoId }: VideoPlayerProps) {
                 variant={'outline'}
                 size={'icon'}
                 onClick={() => setIsChatOpen(!isChatOpen)}
-                className='absolute bottom-4 left-16'>
+                className='absolute bottom-4 left-16 text-blue-500 hover:text-slate-700 transition-colors p-1.5'>
                 {isChatOpen ? <IoChatbubbleEllipses size={24} /> : <IoChatbubbleEllipsesOutline size={24} />}
             </Button>
         </div>
