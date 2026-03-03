@@ -47,7 +47,7 @@ export default function AgendaItem({ speaker, onClick, selected = false }: Agend
                     {speaker.tags.slice(0, 3).map((tag) => (
                         <span
                             key={tag}
-                            className="text-[10px] font-semibold tracking-wider uppercase text-slate-400 border border-slate-200 px-2 py-0.5 rounded-sm"
+                            className="text-xs font-semibold tracking-wider uppercase text-slate-400 border border-slate-200 px-2 py-0.5 rounded-sm"
                         >
                             {tag}
                         </span>
