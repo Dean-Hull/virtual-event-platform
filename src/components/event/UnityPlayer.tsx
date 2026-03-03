@@ -14,6 +14,7 @@ declare global {
 
 export default function UnityPlayer() {
     const canvasRef = React.useRef<HTMLCanvasElement>(null);
+    const hasInitialised = React.useRef(false);
 
     useEffect(() => {
         if (!BLOB_URL) {
@@ -21,7 +22,8 @@ export default function UnityPlayer() {
             return;
         }
 
-        if (window.createUnityInstance) return;
+        if (hasInitialised.current) return;
+        hasInitialised.current = true;
 
         const script = document.createElement('script');
         script.src = `${BLOB_URL}/Builds.loader.js`;
