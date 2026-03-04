@@ -1,3 +1,106 @@
+# LeadXP Virtual Event Platform
+
+A virtual event platform POC built with Next.js, featuring a 3D interactive environment powered by Unity WebGL, agenda, speaker profiles and content with real-time chat.
+
+## Features
+
+- Speaker Directory: Browse and filter speakers by tag (AI, FinTech, Healthcare, etc.)
+- Virtual Environment: Interactive 3D booth explorer powered by Unity WebGL
+- Keynote Stream: Embedded live/recorded video player with chat and document access
+- Live Chat: Real-time audience chat widget during sessions
+- Document Viewer: Access pitch decks and supporting documents per speaker
+- Agenda: Session schedule with speaker thumbnails and time slots
+
+## Tech Stack
+
+| Layer | Technology |
+|---|---|
+| Framework | [Next.js 16](https://nextjs.org/) |
+| Language | TypeScript |
+| Styling | Tailwind CSS v4 |
+| UI Components | [shadcn/ui](https://ui.shadcn.com/) + Radix UI |
+| 3D Environment | Unity WebGL |
+| Icons | Lucide React + React Icons |
+| Fonts | Inter (Google Fonts) |
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 18+
+- npm / yarn / pnpm
+
+### Installation
+
+```bash
+git clone https://github.com/your-org/virtual-event-platform.git
+cd virtual-event-platform
+npm install
+```
+
+### Environment Variables
+
+Create a `.env.local` file in the root directory:
+
+```env
+NEXT_PUBLIC_VIDEO_ID=your_youtube_video_id
+NEXT_PUBLIC_BLOB_URL=https://your-blob-storage-url
+```
+
+### Running Locally
+
+```bash
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## Project Structure
+
+```
+src/
+├── app/               # Next.js App Router pages
+│   ├── home/          # Landing page
+│   ├── explore/       # Virtual environment + agenda
+│   ├── speakers/      # Speaker directory with tag filtering
+│   └── keynote/       # Video stream page
+├── components/
+│   ├── cards/         # Speaker, agenda, and Unity overlay cards
+│   ├── event/         # VideoPlayer and UnityPlayer components
+│   ├── layout/        # Header / navigation
+│   ├── ui/            # shadcn/ui base components
+│   └── widgets/       # Chat, agenda, and documents widgets
+├── constants/         # Navigation items
+├── routes/            # App view enums
+└── types/             # TypeScript interfaces (Speaker, Content, etc.)
+public/
+└── data/
+    └── speakers.ts    # Speaker data and headshots
+```
+
+## Available Scripts
+
+```bash
+npm run dev       # Start development server
+npm run build     # Production build
+npm run start     # Start production server
+npm run lint      # Run ESLint
+```
+
+## Deployment
+
+Deploy easily on [Vercel](https://vercel.com/):
+
+```bash
+vercel deploy
+```
+
+Ensure all environment variables are configured in your Vercel project settings.
+
+---
+
+© 2026 LeadXP · All Rights Reserved
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
