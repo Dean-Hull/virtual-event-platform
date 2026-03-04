@@ -1,6 +1,10 @@
 "use client";
 
 import React, { useEffect } from 'react';
+import { IoDocument } from 'react-icons/io5';
+import { Button } from '../ui/button';
+import { DocumentsModal } from '../widgets/DocumentsModal';
+import { FAKE_DOCUMENTS } from '@/types/content';
 
 const BLOB_URL = process.env.NEXT_PUBLIC_BLOB_URL;
 
@@ -27,7 +31,7 @@ export default function UnityPlayer() {
 
         const script = document.createElement('script');
         script.src = `${BLOB_URL}/Builds.loader.js`;
-        
+
         script.onload = () => {
             if (!canvasRef.current) return;
 
@@ -42,7 +46,7 @@ export default function UnityPlayer() {
         };
         document.body.appendChild(script);
 
-        return () => { 
+        return () => {
             document.body.removeChild(script);
             window.unityInstance = undefined;
         };

@@ -1,9 +1,8 @@
 "use client";
 
 import VideoPlayer from "@/components/event/VideoPlayer";
-import React from "react";
 
-const VIDEO_ID = process.env.NEXT_VIDEO_ID;
+const VIDEO_ID = process.env.NEXT_PUBLIC_VIDEO_ID;
 
 export default function Keynote() {
     return (
