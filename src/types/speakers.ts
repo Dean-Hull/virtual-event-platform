@@ -5,6 +5,7 @@ export interface Speaker {
     name: string;
     thumbnail: StaticImageData | null;
     tags: string[];
+    timeOnStage: string;
     headline: string;
     keyStat: string;
     problem: string;

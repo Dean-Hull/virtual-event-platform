@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { SpeakerCard } from "@/components/cards/InnovatorCard";
+import { SpeakerCard } from "@/components/cards/SpeakerCard";
 import { speakersData } from "../../../public/data/speakers";
 import { SpeakerTag } from "@/types/speakers";
 import { Button } from "@/components/ui/button";
